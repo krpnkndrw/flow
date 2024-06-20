@@ -1,0 +1,16 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "stylelint.validate": ["css", "scss"],
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "todo-tree.tree.showBadges": true,
+  "svg.preview.background": "dark-transparent",  
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#3f6494"
+  }  
+}

@@ -1,0 +1,98 @@
+.scrollArea :global {
+  .simplebar-content {
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      background: transparent;
+    }
+  }
+
+  .simplebar-content-wrapper {
+    outline: none;
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      background: transparent;
+    }
+  }
+
+  .simplebar-scrollbar {
+    &::before {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: var(--other_6);
+    }
+  }
+
+  .simplebar-scrollbar.simplebar-visible::before {
+    opacity: 1;
+  }
+
+  .simplebar-track {
+    z-index: 0;
+    border-radius: 0;
+  }
+
+  .simplebar-vertical {
+    right: 5px;
+    width: 16px;
+    height: 100%;
+  }
+
+  .simplebar-horizontal {
+    z-index: 2;
+    bottom: 5px;
+    width: 100%;
+    height: 16px;
+  }
+
+  .simplebar-vertical .simplebar-scrollbar {
+    &::before {
+      left: auto;
+      width: 6px;
+      background-color: grey;
+      transform-origin: right center;
+      transition: width 0.3s, opacity 0.3s;
+    }
+  }
+  .simplebar-horizontal .simplebar-scrollbar {
+    top: 0;
+    height: 16px;
+    &::before {
+      top: auto;
+      height: 5px;
+      background-color: grey;
+      transform-origin: center bottom;
+      transition: height 0.3s, opacity 0.3s;
+    }
+  }
+}
+
+.scrollArea.onlyVertical :global {
+  .simplebar-horizontal {
+    display: none;
+  }
+}
+.scrollArea.sizeSmall :global {
+  .simplebar-horizontal .simplebar-scrollbar {
+    top: 0;
+    height: 16px;
+    &::before {
+      top: auto;
+      height: 3px;
+      transform-origin: center bottom;
+      transition: height 0.3s, opacity 0.3s;
+    }
+  }
+  .simplebar-vertical .simplebar-scrollbar {
+    &::before {
+      left: auto;
+      width: 3px;
+      background-color: grey;
+      transform-origin: right center;
+      transition: width 0.3s, opacity 0.3s;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "stylelint-config-prettier",
+    "stylelint-config-css-modules",
+    "stylelint-config-idiomatic-order"
+  ],
+  "rules": {
+    "property-no-vendor-prefix": null,
+    "selector-max-id": 1,
+    "string-quotes": "single",
+    "font-family-name-quotes": "always-unless-keyword",
+    "value-no-vendor-prefix": null,
+    "value-keyword-case": null,
+    "selector-pseudo-class-no-unknown": [true, { "ignorePseudoClasses": ["global"] }],
+    "max-nesting-depth": [2, { "ignore": ["pseudo-classes"] }]
+  },
+  "ignoreFiles": ["**/*.tsx"]
+}

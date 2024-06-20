@@ -1,0 +1,16 @@
+.edgeLabel {
+  position: absolute;
+  padding: 10;
+  background: '#ffcc00';
+  border-radius: 5;
+  font-size: 12;
+  font-weight: 700;
+  // visibility: 'hidden';
+  // &:hover {
+  //   visibility: 'visible';
+  // }
+}
+
+.edge {
+  background-color: 'red';
+}
