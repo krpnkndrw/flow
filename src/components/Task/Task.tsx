@@ -18,7 +18,14 @@ const Task = (props: any) => {
           <Handle type="source" position={Position.Right} isConnectableStart={false} />
         </>
       )}
-      <p>{type}</p>
+      {type === 'split' && (
+        <>
+          <Handle type="target" position={Position.Left} isConnectableStart={false} />
+          <Handle type="source" id="1" position={Position.Right} isConnectableStart={false} />
+          <Handle type="source" id="2" position={Position.Bottom} isConnectableStart={false} />
+        </>
+      )}
+      <p>{data.label}</p>
     </div>
   )
 }

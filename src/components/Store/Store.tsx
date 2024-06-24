@@ -7,7 +7,7 @@ const Store = () => {
     <div className={styles.store}>
       <ScrollArea>
         {[...Array(10).keys()].map((i) => {
-          return <StoreElement key={i} />
+          return <StoreElement key={i} type={i === 0 ? 'split' : 'simple'} />
         })}
       </ScrollArea>
     </div>
